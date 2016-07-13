@@ -31,3 +31,18 @@ TARGET_KERNEL_VARIANT_CONFIG := msm8930_serrano_eur_3g_defconfig
 
 # BLN
 BOARD_HAVE_GENERIC_BLN := true
+
+# BlissPop Configs
+TARGET_TC_ROM := 4.9-linaro
+TARGET_TC_KERNEL := 4.9-linaro
+BLISSIFY := true
+BLISS_O3 := false
+BLISS_STRICT := false
+BLISS_GRAPHITE := false
+BLISS_KRAIT := true
+BLISS_PIPE := true
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+
+#SaberMod
+-include vendor/bliss/config/sm.mk
